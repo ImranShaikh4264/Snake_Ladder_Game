@@ -1,5 +1,5 @@
 package com.bridgelab.snakeladder;
-
+// UC-1 player at zero position
 public class SnakeAndLadder {
 	static int player=0;
 public static void main(String[] args) {
