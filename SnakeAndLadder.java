@@ -1,6 +1,6 @@
 package com.bridgelab.snakeladder;
 
-// UC-4 Repeat till player position is 100.
+// UC-5 Repeat till player position is  at exact 100.
 public class SnakeAndLadder {
 	public static int checkSnakeLadder(int pos) {
 		int position=pos;
@@ -45,6 +45,10 @@ public class SnakeAndLadder {
 		counter++;
 		position=position+dice;
 		position=checkSnakeLadder(position);
+		if (position>100) {
+			position=position-dice;
+			
+		}
 		}
 		System.out.println("Player won the game");
 		System.out.println("Player position  " +position);
