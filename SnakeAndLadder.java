@@ -1,6 +1,6 @@
 package com.bridgelab.snakeladder;
 
-// UC-5 Repeat till player position is  at exact 100.
+// UC-6 Repeat till player position is  at exact 100 and find number of time dice throw to win game.
 public class SnakeAndLadder {
 	public static int checkSnakeLadder(int pos) {
 		int position=pos;
@@ -40,18 +40,19 @@ public class SnakeAndLadder {
 		System.out.println("Well come to Snake and Ladder Game");
 		System.out.println(" Game start player at position  " + position);
 		int counter=0;
-		for (position=1;position<100;position++) {
-		int dice = (int) (Math.random() * (6) + 1);
-		counter++;
+		for (position=0;position<100;position++) {
+		int dice = (int) (Math.random() * (6)+1);
 		position=position+dice;
+		counter++;
+		System.out.println("player position  "+position);
 		position=checkSnakeLadder(position);
 		if (position>100) {
 			position=position-dice;
 			
 		}
 		}
+		System.out.println("Player position final  " +position);
 		System.out.println("Player won the game");
-		System.out.println("Player position  " +position);
 		System.out.println("Number of time dice throw  "+counter);
 	}
 }
